@@ -1,0 +1,165 @@
+/* Custom CSS to make blog content wider */
+
+/* Increase main content width for all page types */
+.main {
+    max-width: 1200px !important;
+    width: 90% !important;
+}
+
+/* Increase post content width */
+.post-content {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Increase general content container width */
+.content {
+    max-width: 1200px !important;
+    width: 90% !important;
+}
+
+/* Override any specific post single page width constraints */
+.post-single {
+    max-width: 1200px !important;
+    width: 90% !important;
+}
+
+/* Apply consistent width to list pages (blogs listing) */
+.list {
+    max-width: 1200px !important;
+    width: 90% !important;
+}
+
+/* Apply to post entries on list pages */
+.post-entry {
+    max-width: none !important;
+    width: 100% !important;
+}
+
+/* Apply to archive pages and term pages */
+.archive,
+.terms {
+    max-width: 1200px !important;
+    width: 90% !important;
+}
+
+/* Ensure proper margin centering for wider content */
+.main,
+.content,
+.post-single,
+.list,
+.archive,
+.terms {
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+/* Make sure text content uses the full available width */
+.post-single .post-content p,
+.post-single .post-content ul,
+.post-single .post-content ol,
+.post-single .post-content blockquote,
+.post-single .post-content pre {
+    max-width: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    .main,
+    .content,
+    .post-single,
+    .list,
+    .archive,
+    .terms {
+        width: 95% !important;
+        padding: 0 15px !important;
+    }
+}
+
+/* Make post titles larger */
+.post-title {
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+}
+
+/* Video carousel styling */
+.video-carousel {
+    background-color: white !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    margin: 20px 0 !important;
+}
+
+.video-carousel .video-caption {
+    background-color: white !important;
+    padding: 15px !important;
+    margin-top: 10px !important;
+}
+
+.video-carousel .video-caption p {
+    color: #333 !important;
+    margin: 0 !important;
+    font-style: normal !important;
+    /*  <-- 添加这一行来取消斜体 */
+}
+
+.video-carousel .video-caption {
+    font-style: normal !important;
+}
+
+/* PDF container styling */
+.pdf-container {
+    background-color: white !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.pdf-container object {
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+}
+
+/* Custom button styling */
+.button-container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+    margin: 30px 0 !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.custom-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 12px 24px !important;
+    background-color: #ffffff !important;
+    color: #333333 !important;
+    border: 1px solid #dddddd !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    white-space: nowrap !important;
+}
+
+.custom-button:hover {
+    background-color: #f5f5f5 !important;
+    border-color: #cccccc !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-1px) !important;
+}
+
+.button-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 8px !important;
+    vertical-align: middle !important;
+}

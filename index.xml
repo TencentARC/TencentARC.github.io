@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ARC</title>
+    <link>https://tencentarc.github.io/</link>
+    <description>Recent content on ARC</description>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Jul 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tencentarc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts</title>
+      <link>https://tencentarc.github.io/posts/arc-video-announcement/</link>
+      <pubDate>Tue, 22 Jul 2025 10:00:00 +0000</pubDate>
+      <guid>https://tencentarc.github.io/posts/arc-video-announcement/</guid>
+      <description>&lt;div class=&#34;button-container&#34;&gt;
+    
+
+
+
+&lt;a href=&#34;https://huggingface.co/TencentARC/ARC-Hunyuan-Video-7B&#34; class=&#34;custom-button&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+    
+    &lt;span&gt;🤗 Hugging Face&lt;/span&gt;
+&lt;/a&gt; 
+
+
+
+&lt;a href=&#34;https://github.com/TencentARC/ARC-Hunyuan-Video-7B/&#34; class=&#34;custom-button&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+    
+    &lt;span&gt;GitHub&lt;/span&gt;
+&lt;/a&gt; 
+
+
+
+&lt;a href=&#34;https://arc.tencent.com/en/document/ARC-Hunyuan-Video-7B&#34; class=&#34;custom-button&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+    
+    &lt;span&gt;API Documentation&lt;/span&gt;
+&lt;/a&gt; 
+
+
+
+&lt;a href=&#34;https://arc.tencent.com/zh/ai-demos/multimodal&#34; class=&#34;custom-button&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+    
+    &lt;span&gt;Live Demo&lt;/span&gt;
+&lt;/a&gt; 
+
+&lt;/div&gt; 
+&lt;p&gt;We introduce &lt;strong&gt;ARC-Hunyuan-Video-7B&lt;/strong&gt;, a powerful multimodal model designed for &lt;em&gt;understanding real-world short videos&lt;/em&gt;.
+Understanding user-generated videos is actually challenging due to their complex visual elements, high
+information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery.
+To address this challenge, ARC-Hunyuan-Video-7B
+processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About ARC</title>
+      <link>https://tencentarc.github.io/about/</link>
+      <pubDate>Mon, 15 Jan 2024 10:00:00 +0000</pubDate>
+      <guid>https://tencentarc.github.io/about/</guid>
+      <description>&lt;p&gt;Applied Research Center (ARC) is a leading research organization dedicated to advancing the frontiers of artificial intelligence. We focus on cutting-edge research that bridges the gap between theoretical breakthroughs and practical applications.&lt;/p&gt;
+&lt;h2 id=&#34;our-mission&#34;&gt;Our Mission&lt;/h2&gt;
+&lt;p&gt;To drive innovation in artificial intelligence through rigorous research, collaborative partnerships, and the development of transformative technologies that benefit society.&lt;/p&gt;
+&lt;h2 id=&#34;research-areas&#34;&gt;Research Areas&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt;: Developing novel algorithms and architectures for various AI applications&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Computer Vision&lt;/strong&gt;: Advancing visual understanding and perception systems&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Natural Language Processing&lt;/strong&gt;: Creating intelligent systems that understand and generate human language&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Applied AI&lt;/strong&gt;: Translating research breakthroughs into real-world solutions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;core-values&#34;&gt;Core Values&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Innovation&lt;/strong&gt;: Pioneering new approaches and methodologies in AI research&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Excellence&lt;/strong&gt;: Maintaining the highest standards in research quality and scientific rigor&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collaboration&lt;/strong&gt;: Fostering partnerships with academic institutions and industry leaders&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Impact&lt;/strong&gt;: Creating technologies that make a meaningful difference in the world&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;team&#34;&gt;Team&lt;/h2&gt;
+&lt;p&gt;Our diverse team of researchers, engineers, and scientists brings together expertise from multiple disciplines to tackle the most challenging problems in artificial intelligence.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

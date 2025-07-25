@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on ARC</title>
+    <link>https://tencentarc.github.io/posts/</link>
+    <description>Recent content in Posts on ARC</description>
+    <generator>Hugo -- 0.148.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Jul 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tencentarc.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts</title>
+      <link>https://tencentarc.github.io/posts/arc-video-announcement/</link>
+      <pubDate>Tue, 22 Jul 2025 10:00:00 +0000</pubDate>
+      <guid>https://tencentarc.github.io/posts/arc-video-announcement/</guid>
+      <description>&lt;div class=&#34;button-container&#34;&gt;
+    
+
+
+
+&lt;a href=&#34;https://huggingface.co/TencentARC/ARC-Hunyuan-Video-7B&#34; class=&#34;custom-button&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+    
+    &lt;span&gt;🤗 Hugging Face&lt;/span&gt;
+&lt;/a&gt; 
+
+
+
+&lt;a href=&#34;https://github.com/TencentARC/ARC-Hunyuan-Video-7B/&#34; class=&#34;custom-button&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+    
+    &lt;span&gt;GitHub&lt;/span&gt;
+&lt;/a&gt; 
+
+
+
+&lt;a href=&#34;https://arc.tencent.com/en/document/ARC-Hunyuan-Video-7B&#34; class=&#34;custom-button&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+    
+    &lt;span&gt;API Documentation&lt;/span&gt;
+&lt;/a&gt; 
+
+
+
+&lt;a href=&#34;https://arc.tencent.com/zh/ai-demos/multimodal&#34; class=&#34;custom-button&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;
+    
+    &lt;span&gt;Live Demo&lt;/span&gt;
+&lt;/a&gt; 
+
+&lt;/div&gt; 
+&lt;p&gt;We introduce &lt;strong&gt;ARC-Hunyuan-Video-7B&lt;/strong&gt;, a powerful multimodal model designed for &lt;em&gt;understanding real-world short videos&lt;/em&gt;.
+Understanding user-generated videos is actually challenging due to their complex visual elements, high
+information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery.
+To address this challenge, ARC-Hunyuan-Video-7B
+processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts | ARC</title>
+<meta name="keywords" content="">
+<meta name="description" content="
+    
+
+
+
+
+    
+    🤗 Hugging Face
+ 
+
+
+
+
+    
+    GitHub
+ 
+
+
+
+
+    
+    API Documentation
+ 
+
+
+
+
+    
+    Live Demo
+ 
+
+ 
+We introduce ARC-Hunyuan-Video-7B, a powerful multimodal model designed for understanding real-world short videos.
+Understanding user-generated videos is actually challenging due to their complex visual elements, high
+information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery.
+To address this challenge, ARC-Hunyuan-Video-7B
+processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.">
+<meta name="author" content="ARC">
+<link rel="canonical" href="https://tencentarc.github.io/posts/arc-video-announcement/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a2a1ad09a07da1d8c6ce3e6cf1f1a2110350e248d32ff5b3ba3f11d4eedd4078.css" integrity="sha256-oqGtCaB9odjGzj5s8fGiEQNQ4kjTL/Wzuj8R1O7dQHg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://tencentarc.github.io/images/arc_logo_1.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tencentarc.github.io/images/arc_logo_1.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tencentarc.github.io/images/arc_logo_1.png">
+<link rel="apple-touch-icon" href="https://tencentarc.github.io/images/arc_logo_1.png">
+<link rel="mask-icon" href="https://tencentarc.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://tencentarc.github.io/posts/arc-video-announcement/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><link rel="stylesheet" href="/css/custom.css"> 
+ <meta property="og:url" content="https://tencentarc.github.io/posts/arc-video-announcement/">
+  <meta property="og:site_name" content="ARC">
+  <meta property="og:title" content="ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts">
+  <meta property="og:description" content=" 🤗 Hugging Face GitHub API Documentation Live Demo We introduce ARC-Hunyuan-Video-7B, a powerful multimodal model designed for understanding real-world short videos. Understanding user-generated videos is actually challenging due to their complex visual elements, high information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery. To address this challenge, ARC-Hunyuan-Video-7B processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-22T10:00:00+00:00">
+    <meta property="article:modified_time" content="2025-07-22T10:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts">
+<meta name="twitter:description" content="
+    
+
+
+
+
+    
+    🤗 Hugging Face
+ 
+
+
+
+
+    
+    GitHub
+ 
+
+
+
+
+    
+    API Documentation
+ 
+
+
+
+
+    
+    Live Demo
+ 
+
+ 
+We introduce ARC-Hunyuan-Video-7B, a powerful multimodal model designed for understanding real-world short videos.
+Understanding user-generated videos is actually challenging due to their complex visual elements, high
+information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery.
+To address this challenge, ARC-Hunyuan-Video-7B
+processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://tencentarc.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts",
+      "item": "https://tencentarc.github.io/posts/arc-video-announcement/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts",
+  "name": "ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts",
+  "description": " 🤗 Hugging Face GitHub API Documentation Live Demo We introduce ARC-Hunyuan-Video-7B, a powerful multimodal model designed for understanding real-world short videos. Understanding user-generated videos is actually challenging due to their complex visual elements, high information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery. To address this challenge, ARC-Hunyuan-Video-7B processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": " 🤗 Hugging Face GitHub API Documentation Live Demo We introduce ARC-Hunyuan-Video-7B, a powerful multimodal model designed for understanding real-world short videos. Understanding user-generated videos is actually challenging due to their complex visual elements, high information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery. To address this challenge, ARC-Hunyuan-Video-7B processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.\nCompared to prior arts, we introduces a new paradigm of Structured Video Comprehension, with capabilities including:\nDeep Understanding of Real-World Short Videos: ARC-Hunyuan-Video-7B excels at analyzing user-generated content from platforms like WeChat Channels and TikTok. It goes beyond surface-level descriptions to grasp the creator’s intent, emotional expression, and core message by processing complex visual elements, dense audio cues, and rapid pacing. Synchronized Audio-Visual Reasoning: The synchronization of raw visual and audio signals allows our model to answer complex questions that are impossible to solve with only one modality, such as understanding humor in a skit or details in a product review. Precise Temporal Awareness: ARC-Hunyuan-Video-7B knows not just what happens, but when it happens. It supports multi-granularity timestamped captioning, temporal video grounding, and detailed event summarization, making it perfect for applications like video search, highlight generation, and content analysis. Advanced Reasoning and Application Versatility: Leveraging a comprehensive multi-stage training regimen including Reinforcement Learning (RL), ARC-Hunyuan-Video-7B demonstrates strong reasoning capabilities. It supports zero-shot or few-shot fine-tuning for diverse downstream applications like video tagging, recommendation, and retrieval. We are open-sourcing ARC-Hunyuan-Video-7B including model checkpoint, inference code and API. The version supports Chinese and English videos and particularly excels at Chinese. We hope that ARC-Hunyuan-Video will contribute to advancing the field of structured video comprehension and inspire new developments in the comprehension of real-world short videos.\nModel Capabilities 1. Joint Audio-Visual Reasoning for Complex Understanding ARC-Hunyuan-Video-7B’s strength lies in its ability to integrate information from both the visual and audio streams. This is critical for real-world videos where the meaning is often conveyed through a combination of spoken words, sound effects, and on-screen texts (can be absent). We want to point out that although many short videos feature subtitles, these visual texts can be easily missed or only partially captured at low frame sampling rates. This makes processing the complete audio stream essential for a reliable comprehension of the spoken content. The capability of joint audio-visual reasoning unlocks a deeper level of understanding that video-only models cannot achieve. (Swipe right to see more cases.)\nYour browser does not support the video tag. Question: Describe the video content. Thinking: The video, titled 'POV: Parent Logic', presents a comedic skit about a parent's perception of their child's activities. A young man, playing both the child and the parent, begins by explaining his 'logic' (00:00:00 - 00:00:08). He states that when he leaves and returns, seeing his child on the phone, he will assume the child has been playing all the time, which will make him very angry. The scene then shifts to illustrate a different scenario (00:00:08 - 00:00:16). The parent leaves and returns to find the child doing homework. In this case, the parent's logic is that the child only started homework the moment they came back, causing the parent to be angry. Next, the scenario is reversed (00:00:16 - 00:00:24). The parent leaves and then returns to find the child playing on the phone. The parent's assumption is that the child started playing the instant they left, leading to anger. In the final scenario, the parent leaves and returns to find the child doing homework (00:00:24 - 00:00:35). The parent's logic is that the child stopped doing homework the moment they left and only started when they returned, again causing the parent to be angry. Answer: This video is a humorous and relatable skit that satirizes the 'parent logic' phenomenon. The creator portrays a parent who, upon returning from leaving the house, experiences a series of negative thoughts based on what he sees. The core of the comedy lies in the parent's tendency to assume the worst in his child's activities. For instance, if the child is on the phone when he leaves and is doing homework when he returns, the parent assumes the child has only begun working the instant he leaves. This flawed logic is exaggerated in the final scene, where the parent assumes the child has stopped doing homework the moment he departs and only started when he comes back, leading to a comically intense reaction. The video effectively uses this exaggerated scenario to create a funny and shareable piece of content about the unique perspective and often illogical assumptions parents make about their children's behavior.\nYour browser does not support the video tag. Question: List the detailed purchase advice for the iPhone 16 in bullet point. Thinking: The user wants a comprehensive list of purchase advice. I need to identify all the models mentioned and their specific features and price points to create a complete guide. The video presents three main models with different price points and features. I will list them in the order they are introduced: the budget-friendly 16e, the standard 16, and the high-end 16 Pro. For each model, I will state its price range, its main selling point (e.g., battery, display, camera), and any key features (e.g., chip, lighting). The 16e is for $600, the 16 is for $800, and the 16 Pro is for $1000 and up. I will format this information into a clear, ordered list. Answer: The video provides the following detailed purchase advice for the iPhone 16 models:\n1. **iPhone 16e (00:00:02 - 00:00:12):** This is the cheapest option, priced at $600. Its main selling point is a long-lasting battery and a reliable chip set designed for users who are not tech-savvy. It features a 6.1-inch display.\n2. **iPhone 16 (00:00:13 - 00:00:34):** This model starts at $800. Its key upgrades include a brighter display with a dynamic island, a more powerful camera system with an ultra-wide and macro capability, and a smaller enhancement like the MagSafe charging ring. It comes in two sizes: a 6.1-inch model and a 6.7-inch model.\n3. **iPhone 16 Pro (00:00:35 - 00:00:55):** These are the most advanced models, starting at $1000. They feature 120Hz displays, a significantly improved camera system with a telephoto lens, LiDAR for 3D mapping, better speakers and microphones, a brighter flashlight, and a faster A18 Pro chip. They are available in two sizes: a 6.3-inch model and a 6.9-inch Pro Max model.\nYour browser does not support the video tag. Question: Why is the man dissatisfied with the pork cutlet he cooked himself at home? Thinking: The video first shows the man cooking a pork cutlet at home. He batters it, fries it, and cuts it open to reveal the inside. At 00:00:09, he holds up a slice and says, 'So thin,' indicating his dissatisfaction with the thickness of the cutlet. This sets up a comparison with the next scene. Answer: The man is dissatisfied with the pork cutlet because, after cutting it open, he finds that the inside is 'so thin,' indicating the cutlet lacks the desired thickness for the dish he intended to make.\n‹ › 2. Fine-Grained Temporal Understanding and Summarization A core strength of ARC-Hunyuan-Video-7B is its exceptional ability to understand the chronological flow of events. The model can break down a video into a sequence of coherent, time-stamped events. Through leveraging its explicit temporal awareness, achieved through our timestamp overlay mechanism, and joint visual-audio reasoning, our model can also pinpoint event localization with remarkable accuracy. This demonstrates that our model does not just see what happens, but understands precisely when it happens, a cornerstone of structured video comprehension. Such capability is pivotal for applications like video highlight generation and structured data extraction. (Swipe right to see more cases.)\nYour browser does not support the video tag. Question: 请按时间顺序给出视频的章节标题和对应时间点. Thinking: 视频开头，博主指出家里的插座坏了，并强调要靠自己动手更换，以此引出教程主题(00:00:00 - 00:00:06)。第一步，她演示了更换插座前的安全措施，即先到电闸箱拉下总开关(00:00:06 - 00:00:11)。第二步，她开始拆卸旧的插座，先用螺丝刀撬开插座背面的卡扣，然后拧下所有螺丝，并提醒要用电笔测试内部电线，确认断电后才能操作(00:00:11 - 00:00:31)。第三步，她详细讲解了如何正确拆线，通过插座底部的字母标识（L、N、D）来确定火线、零线和地线的连接位置，并建议拍摄记录原线序以便复接(00:00:31 - 00:00:54)。第四步，她演示了如何将新插座的电线正确地插入对应字母标识的接线柱，并用螺丝刀将电线拧紧，确保火线铜线部分尽可能塞满接线孔以防裸露(00:00:54 - 00:01:06)。最后，她将插座盖板装回，用螺丝刀拧紧螺丝，完成整个更换过程，并用吹风机测试新插座的正常使用(00:01:06 - 00:01:16)。视频结尾，博主预告了下期内容，并呼吁观众点赞关注(00:01:16 - 00:01:27)。 Answer:\n00:00:00 - 00:00:11 更换插座的准备与安全：断电总开关\n00:00:11 - 00:00:31 拆卸旧插座：工具准备与安全检查\n00:00:31 - 00:00:54 正确拆线：识别火线、零线与地线\n00:00:54 - 00:01:06 接线与安装：新插座的正确接线\n00:01:06 - 00:01:27 完成安装与总结\nYour browser does not support the video tag. Question: How many scenes appear in the video? Describe each scene in detail with the time range. Thinking: The video is a compilation of different morning routines. I need to identify the distinct scenes and their corresponding timestamps. The first scene, labeled 'Italy', shows a man being served a cappuccino and croissant from a waiter (00:00:00 - 00:00:11). The second scene, labeled 'UK', features a man pouring tea from a teapot into a cup and then drinking it (00:00:11 - 00:00:20). The third scene, labeled 'Switzerland', shows a man in a shirt dancing energetically on the street in front of a restaurant (00:00:20 - 00:00:23). The final scene, labeled 'USA', depicts a man with a paper as a bib, eating pancakes while wearing sunglasses (00:00:23 - 00:00:31). Answer:\n1. **Italy (00:00:00 - 00:00:11):** A man in a black polo shirt is seated at an outdoor cafe. A waiter brings him a cappuccino and a croissant on a plate. He takes a bite of the croissant, then picks up his cup and takes a sip of the coffee.\n2. **UK (00:00:11 - 00:00:20):** A man in a brown shirt is at a cafe. He pours hot tea from a white teapot into a cup, smiles, and then lifts the cup to take a drink.\n3. **Switzerland (00:00:20 - 00:00:23):** The scene opens with a view of a pink and grey building. A man in a shirt and dark pants suddenly runs and dances energetically on the street in front of the restaurant window.\n4. **USA (00:00:23 - 00:00:31):** A man in a grey shirt and sunglasses is seated at a cafe table with a paper draped over his shoulder like a bib. He smiles while looking at the camera.\nYour browser does not support the video tag. Question: When can we observe that the woman in the video comment on the food she made? Thinking: The user wants to find the moment the woman tastes the food and comments on the result. I need to locate the part of the video where she eats the treat and gives her opinion. At 00:00:27, she takes a bite of the frozen treat. She then comments on its texture and taste, saying 'As always, mine isn't pretty... that's really soft and so delicious'. This comment segment ends at 00:00:33 when she gives her final score. Therefore, the relevant time range is from when she starts eating and commenting until she finishes her sentence. Answer: 00:00:27 - 00:00:34\nYour browser does not support the video tag. Question: 定位孙悟空被一分为二的镜头。 Thinking: 1. 首先，我需要理解问题的核心：找到孙悟空被“一分为二”的具体画面。\n2. 我会浏览整个视频，寻找一个视觉上非常奇特的场景，即角色分裂成两个部分。\n3. 在视频的后半段，我听到了猪八戒说“还有两刀呢”，这预示着接下来会有第二次攻击。\n4. 紧接着在00:01:56，伴随着一声巨响和金光，画面中出现了两个穿着同样黄色衣服的孙悟空。这个镜头完全符合问题描述。\n5. 这个分身的镜头持续到大约00:02:01，之后他们开始行动并与其他角色互动。\n6. 因此，可以确定“孙悟空被一分为二\"的镜头发生在00:01:56到00:02:01之间。 Answer: 00:01:56 - 00:02:01\nYour browser does not support the video tag. Question: 视频中的“真香”片段发生在什么时间？ Thinking: 1. 首先，我需要理解问题的核心：找到视频中被称为“真香”的片段。这个网络用语指一个人嘴上说不要，但身体却很诚实地接受了某样东西。\n2. 我浏览了整个视频，寻找一个年轻人从激烈抗拒到最终接受食物的场景。\n3. 在视频的早期部分（00:00:00 - 00:02:10），两个年轻男子表现出极度的暴躁和抵触情绪，拒绝任何人的食物，甚至威胁要跳下山崖。\n4. 视频在00:02:11处，一个男孩开始做饭。\n5. 经过一段时间的闹剧和准备后，在00:02:31，其中一个穿黑色运动服的男孩再次大声叫嚣：“我王境泽就是饿死，死外边从这里跳下去，不会吃你们一点东西！”\n6. 紧接着，在00:02:32，他和其他人一起坐在火堆旁吃饭。当他看到食物时，态度发生了180度大转弯，开始狼吞虎咽地吃起来，并评价“这叫炒饭”，完全推翻了自己之前的言论。这就是字幕所提示的“真香”时刻。\n7. 这个吃饭的场景一直持续到00:02:49左右，他们一边吃饭一边聊天。因此，我将“真香”片段的核心定义为从他开始吃饭到吃完饭聊天的这一段时间。 Answer: 00:02:32 - 00:02:49\n‹ › 3. High-Level Thematic and Creative Analysis Beyond just describing what is happening, ARC-Hunyuan-Video-7B demontrates a remarkable ability for thematic reasoning, which is vital for understanding content focused on emotional expression and viewpoint delivery. It can identify the creator’s intent, analyze the emotional tone, and even comment on creative techniques like narrative structure or symbolism, showing a human-like grasp of the content’s underlying message. (Swipe right to see more cases.)\nYour browser does not support the video tag. Question： 列出这个视频值得借鉴的创意。 Thinking: 视频的核心信息是关于环境保护和人类责任。为了强化这一主题，创作者采用了多种高级的视听语言。一个非常典型的创意是“分屏”技术，它将截然不同的景象（如干旱沙漠与碧绿海洋、工业污染与自然生机）并列，形成强烈对比，直观地揭示了问题的严重性(00:00:49 - 00:00:51)。另一个创意是视觉叙事的递进，视频通过一系列对比鲜明的场景（如火山爆发与人类探索、森林火灾与生态修复、工业废水与清洁能源）来构建一个从“质疑”到“选择”的逻辑链。此外，视频还运用了象征手法，如用“选择向前”对应登山者的前行，用“选择敬畏”对应城市的夜景，用“选择坚持”对应在沙地中栽树的孤独身影，用“选 择长久”对应工业与自然和谐共存的愿景，来赋予“选择”这一概念以深刻的内涵(00:00:25 - 00:00:52)。最后，视频的结尾将宏大的主题落脚于具体的行动号召上，通过“6.5世界环境日”的字样和“未来在我们手中”的口号，将抽象的环保理念转化为具体的、可操作的号召，极具感染力和号召力(00:01:14 - 00:01:46)。同时，视频的配乐、剪辑节奏和画面切换都服务于其主题，营造出一种既忧虑又充满希望的氛围，增强了视频的说服力和感染力。 Answer: 该宣传片在创意上主要体现在以下几个方面：\n1. **强烈的视觉对比与并置**：视频大量使用分屏技术，将同一场景下的两种极端状态（如干旱与生机、污染与纯净）并列，直观地展现了人类活动对环境造成的破坏与挑战，引发观众对问题的深刻反思。\n2. **叙事性视觉语言的递进**：视频构建了一个从“质疑”到“选择”的叙事逻辑。通过“在质疑中选择向前”、“在欢呼中选择敬畏”等一系列递进的字幕，将抽象的环保理念与具体的行动号召相结合，赋予了“选择”这一概念以强大的情感和行动意义。\n3. **象征意义的运用**：视频中的许多场景都带有强烈的象征意义，例如将“选择向前”与登山者的前行联系起来，象征着人类在面对未来时的责任与决心；将“选择敬畏”与城市的繁华夜景并置，引发观众对人与城市关系的思考。\n4. **最终的情感升华与行动号召**：视频的结尾部分，通过展示人类在环保事业中的积极行动（如风力发电、生态修复），最终落脚于“未来在我们手中”这一强有力的口号，将宏大的主题与具体的、可操作的环保行动紧密联系起来，极大地增强了视频的感染力和号召力。\n5. **卓越的视听语言运用**：宣传片在配乐、剪辑和画面选择上都非常出色，其激昂与舒缓交织的音乐、富有冲击力的画面切换、以及将自然景观与人类活动并置的叙事手法，共同营造出一种既忧虑又充满希望的氛围，极大地增强了视频的说服力和感染力。 Question: 你觉得最能体现主题的视频片段是哪一个? Thinking： 这个问题要求理解视频的主旨，并从中找出最能概括或升华这一主旨的画面。视频的核心信息是关于人类面临的环境挑战以及我们应如何应对。我需要寻找一个画面，它能够象征性地总结出视频所传达的关于希望、选择与未来的信息。视频结尾（00:01:46 - 00:01:49）的标题“未来在我们手中”直接点明了主题。然而，在此之前的画面中，有一幕极具象征意义：在广阔的绿色山脉背景下，出现了“未来在我们手中”这几个大字。这不仅是对主题的总结，也像是一种宣言，将希望和责任交给了观众。因此，这最后一帧是整个视频情感和信息的集中体现。 Answer: 最能体现视频主题的一幕是视频结尾处（00:01:46 - 00:01:49）的标题画面。该画面在壮丽的绿色山脉背景上，清晰地展示了“未来在我们手中”这句核心主旨，将视频所探讨的关于人类、选择与环境的关系最终落脚于人类自身的责任与希望上，起到了点睛和升华主题的作用。\nYour browser does not support the video tag. Question: 这个视频的主题是什么？ Thinking: 视频以一个动画形式展开，讲述了一个关于贪吃和健康的故事。(00:00:00 - 00:00:12) 一个光头男子在一家日式餐厅里，看到“白金枪鱼寿司”从200元降价到20元，他欣喜若狂，大喊“捡大便宜啦”，并立刻向老板要了一盘。他狼吞虎咽地吃着寿司，连连称赞“这么好吃”，并心满意足地要求再来十盘。(00:00:12 - 00:00:22) 画面切换到男子的消化系统内部，肠道拟人化地抱怨道：“这白金枪鱼啥味儿的！”，并发现食物在消化道里变成了一坨油，感叹道：“这咋还这么多呀”。肠道建议直接排出，但一个代表脂肪的黄色小人阻止了它，声称“减脂期看不得这些”，并命令肠道“我告就完”。(00:00:22 - 00:00:28) 肠道被脂肪小人堵在“菊花门”前，动弹不得，只能发出“救命”的呼救声。紧接着，一股巨大的黄色液体（代表脂肪）从肛门喷涌而出，伴随着一声爆炸的特效，男子被这股力量猛地掀翻在地。(00:00:28 - 00:00:39) 男子醒来后，发现自己面前堆着一叠用过的纸尿裤，他一脸困惑地问：“这吃个寿司，给纸尿裤干啥呀？”。这时，一位女服务员走过来，揭示了真相：“还真以为自己捡了便宜，这种便宜的白金枪鱼寿司，身上都是油鱼肉做的”，点明了他之所以需要用纸尿裤，是因为他吃了大量的油。 Answer: 该视频通过一个生动有趣的动画短片，讲述了一个男子因贪图“白金枪鱼寿司”的便宜而引发健康问题的故事。视频的核心情节是，男子被20元一盘的低价所吸引，大快朵颐，却不知自己摄入了大量的脂肪。当他感到身体不适时，他的消化系统内部上演了一场“脂肪保卫战”，最终导致他腹泻不止，不得不使用纸尿裤。视频的结尾揭示了真相：所谓的“白金枪鱼”实际上是由大量的油鱼肉制成，所谓的“便宜”只是商家的营销噱头。创作者以一种幽默夸张的手法，巧妙地讽刺了现实生活中常见的“价格刺客”现象，深刻地揭示了消费者在面对低价诱惑时可能做出的非理性消费行为。视频不仅具有娱乐性，更重要的是，它以一种轻松的方式向观众普及了健康饮食和食品安全知识，警示人们不要被表面的低价所迷惑，要警惕那些名不副实的“便宜货”，从而做出更明智的消费选择。 Your browser does not support the video tag. Question: 描述视频的内容和主题。 Thinking: 视频开头，镜头从后方拍摄一位男士在雨中撑着透明雨伞行走的背影，配文“你以为给老公打伞的样子”，营造出一种浪漫温馨的氛围(00:00:00 - 00:00:02)。紧接着，镜头切换到一位女士的自拍视角，她面带微笑，手持雨伞，背景音乐轻柔，画面上浮现出“想象中”、“美丽”、“浪漫”、“幸福”、“端庄”等字样，进一步强化了理想中的场景(00:00:02 - 00:00:06)。最后，视频画风突变，切换到“现实中”的场景，镜头对准了那位男士，他正顶着一把被风吹得完全变形的雨伞，雨水顺着他的脸和眼镜不断滑落，他本人则一脸狼狈和无奈，与之前的浪漫想象形成强烈反差(00:00:06 - 00:00:12)。 Answer: 该视频通过一个简单而生动的“想象 vs 现实”的对比，幽默地记录了情侣间一个充满反差感的日常瞬间。视频前半部分通过浪漫的配乐和“你以为”的文字，构建了一个温馨、体贴的理想化场景：一位女士在雨中为男士撑伞，自己则显得美丽、幸福。然而，视频的后半部分迅速反转，揭示了“现实”中的情景——男士不仅没能被妥善保护，反而被一把被大风吹得东倒西歪的雨伞“欺负”，狼狈不堪。这种强烈的反差制造了出色的喜剧效果，让观众在会心一笑中感受到真实、接地气的爱情。视频的核心在于其真实性和幽默感，它打破了人们对浪漫的刻板印象，展现了爱情中平凡、甚至有些笨拙但依然充满乐趣的一面，成功地用一个生活小插曲引发了观众的共鸣。 Your browser does not support the video tag. Question: 描述视频主旨内容。 Thinking: 视频开头，一名戴眼镜、穿灰色短袖上衣和深色裤子的女子正坐在室内（看起来像家里的沙发或椅子上），手持一部红色手机壳的手机，表情夸张地向旁边一名穿着黑色Balenciaga T恤的男子讲述着什么。男子坐在她旁边，表情显得有些不耐烦或漠不关心。视频画面上方有黄色大字标题：\"当我不在乎女朋友分享的八卦时\"。女子讲述时，屏幕上出现文字：\"我同事的前男友，跟她闺蜜的前男友在一起了\"。男子打断她，屏幕上出现文字：\"跟你有啥关系啊\"。听到这句话后，女子表情瞬间从激动变为震惊和愤怒，她猛地放下手机，站起身，拿起放在旁边的一个绿色行李箱，头也不回地快速走向门口，离开了画面。背景音乐在女子离开时变得动感起来。 Answer: 该视频以幽默夸张的手法，演绎了一个情侣间因男方对女方分享的八卦（同事与闺蜜的前男友复合）表现出不耐烦和漠不关心（\"跟你有什么关系\"）而引发女方愤怒并迅速离家出走的情景。视频通过强烈的戏剧冲突和女方夸张的反应，讽刺了情侣沟通中缺乏共情和过度冷漠的问题，旨在引发观众对于情侣相处模式、情感需求以及如何回应伴侣情绪的思考和讨论。它利用了常见的\"直男式\"回应作为引爆点，制造了喜剧效果，同时也触及了现实生活中可能存在的亲密关系痛点。 Question: 用网络热词描述这个男生 Thinking： 这个问题考察对视频主旨和创作意图的理解。整个视频的核心笑点在于男生对八卦的极度冷漠，这种反应在网络用语中有一个非常形象的词叫\"佛系\"。我需要将这个概念与视频中的行为联系起来。 Answer: 该男生那种对于女友分享的复杂人际关系和情感纠葛表现出极度冷漠、不关心、不感兴趣的态度，这种反应可以被形象地描述为“佛系”或“直男式”的反应。\n‹ › 4. Long Video Structured Understanding Although ARC-Hunyuan-Video-7B is primarily designed for understanding short-form videos (typically under five minutes), it also demonstrates exceptional capabilities in the structural analysis of long videos. This is achieved by segmenting the long video, performing inference on each segment individually, and then using a Large Language Model (LLM) to integrate the results. Benefiting from parallel vLLM inference, the end-to-end pipeline for processing a 40-minute video takes less than 3 minutes. This efficiency highlights its significant potential for practical, real-world applications.\nYour browser does not support the video tag. Question： 请提供视频的结构化解析. \u003c!DOCTYPE html\u003e 《甄嬛传》“滴血认亲”事件全景解析 《甄嬛传》“滴血认亲”事件全景解析 该视频完整再现了电视剧《甄嬛传》中最为惊心动魄的核心情节——“滴血认亲”。这并非一次简单的诬告，而是一场由皇后在幕后精心策划，祺贵人、静白、斐雯等人联手执行，意图一举扳倒甄嬛（熹贵妃）及其家族的致命阴谋。整个事件情节跌宕起伏，从阴谋初现、对簿公堂，到深陷绝境，再到惊天逆转，最终尘埃落定，全面展现了后宫斗争的残酷性、复杂性以及甄嬛超凡的智慧与胆识。\n事件时间线梳理 整场风波环环相扣，逻辑缜密，可大致分为七个阶段：\n第一阶段：风波前奏 —— 甄嬛智审叛仆 (00:00:07 - 00:02:30) 起因: 永寿宫宫女斐雯被收买，准备诬告甄嬛。 经过: 甄嬛早已察觉斐雯异心。她没有直接点破，而是以“琉璃花樽”和“青玉花樽”的细节设下圈套，通过一系列看似随意的提问，轻松击溃了斐雯的心理防线，证明其不仅记性差，而且心思并未放在本职工作上，为后续其证词不可信埋下伏笔。这展现了甄嬛在危机来临前的敏锐洞察力和沉着冷静。 第二阶段：阴谋浮现 —— 祺贵人发难告发 (00:02:30 - 00:05:00) 发难: 祺贵人联合斐雯，在皇后及众妃嫔面前，正式告发熹贵妃与温实初太医有私，秽乱后宫。 辩论: 众人围绕斐雯证词的合理性展开辩论。端妃、敬妃等人提出质疑，认为斐雯一个小小宫女能屡次窥见私情不合常理。而皇后则假意调停，实则步步引导，将事态扩大化。 高潮: 皇上驾到，祺贵人当着皇上的面，再次声泪俱下地告发，将事件彻底推向无法挽回的境地。 第三阶段：对簿公堂 —— 传召人证静白 (00:05:00 - 00:08:54) 扩大战场: 祺贵人进一步提出，甄嬛在甘露寺修行期间便与温实初过从甚密，并请出关键人证——甘露寺的静白师太。 伪证: 静白师太当堂作出“证词”，她以出家人的身份做伪证，描述温实初如何频繁探望甄嬛，两人如何独处一室，言之凿凿，极具迷惑性，让皇上的疑心加重。 场外联动: 与此同时，甄嬛的妹妹玉娆得知消息，心急如焚地赶回宫中，准备为姐姐辩护。 第四阶段：危机升级 —— 直指皇嗣血统 (00:10:00 - 00:17:47) 核心攻击: 祺贵人见私情指控未能一击致命，便抛出了更具杀伤力的指控——质疑六阿哥弘曕并非皇上亲生，而是甄嬛与温实初的私生子。 论据: 她以甄嬛早产、宫中流言等作为“证据”，将矛头直指皇室血脉的纯正性，这触及了皇权的底线。 皇室反应: 皇上勃然大怒，但疑心已生。皇后则假意劝解，实则火上浇油，强调此事关系江山社稷，不可不查。 第五阶段：惊天豪赌 —— 滴血认亲 (00:17:47 - 00:22:30) 终极手段: 在皇后的暗示下，祺贵人提出了最极端、也最具戏剧性的验证方法——滴血认亲。 甄嬛的决断: 面对皇上的猜忌和步步紧逼，甄嬛悲愤交加。为了自证清白，她毅然同意让自己的儿子弘曕与温实初进行滴血认亲。 执行: 仪式开始，在众人屏息凝视下，太监刺破弘曕与温实初的手指，将两人的血滴入同一碗清水中。 第六阶段：惊天逆转 —— 识破白矾之计 (00:22:30 - 00:28:24) 深陷绝境: 碗中两人的血液竟然相融！皇上龙颜大怒，皇后立刻下令将甄嬛打入冷宫，杖杀温实初。甄嬛瞬间从贵妃沦为阶下囚，陷入了必死之局。 绝地反击: 在被拖走的一刻，甄嬛注意到水有问题。她挣脱侍卫，大喊“这水有问题！”，并指出任何人的血滴入此水都会相融。 真相大白: 甄嬛的盟友敬妃和端妃也察觉到异常，指出水中被加入了白矾。白矾可使血液凝结，造成相融的假象。甄嬛为证清白，亲自用自己的血和苏培盛的血试验，证实了水的确被动了手脚。 第七阶段：尘埃落定 —— 清算乱局罪魁 (00:28:24 - 00:40:08) 二次验亲: 皇上下令换上清水，重新验亲。这一次，弘曕与温实初的血液并未相融，甄嬛的清白得以证明。 反向审问: 局势瞬间逆转。甄嬛开始反击，审问静白师太。在玉娆拿出确凿证据（证明静白曾虐待甄嬛）和严刑逼供的威胁下，静白心理防线崩溃，承认自己是受祺贵人指使作伪证。 最终处置: 祺贵人见大势已去，将所有罪责揽到自己身上，但言语中暗示皇后才是幕后主使。皇上盛怒之下，将祺贵人打入冷宫，后被乱棍打死；静白则被处以割舌之刑后杖毙。皇后虽未被直接指证，但其嫌疑已深植皇上心中。 核心人物关系与动机分析 角色 身份/阵营 在事件中的角色与动机 甄嬛 (熹贵妃) 主角 被陷害者与最终反击者。动机是自保、保护子女和家族。她凭借智慧、胆识和盟友的帮助，成功化解了这场生死危机。 皇后 甄嬛的对立面 幕后主使。动机是铲除甄嬛这个最大的威胁，巩固自己的后位和乌拉那拉氏的荣耀。她全程假意公允，实则掌控全局。 祺贵人 皇后党羽 前台执行者/主要打手。动机是出于对甄嬛的嫉妒以及为家族争光的野心。她头脑简单，被人当枪使，最终下场凄惨。 皇上 权力中心 最高裁决者。他的多疑、重情又重面子的性格被皇后利用。他的态度随着“证据”的变化而摇摆，是整个事件走向的关键。 温实初 甄嬛的守护者 被牵连者。因其与甄嬛的旧情及对她的守护，成为阴谋中不可或缺的一环。 静白 \u0026 斐雯 皇后党羽 底层棋子/伪证人。为了利益或被胁迫而参与阴谋，是这场上层斗争的牺牲品。 端妃、敬妃、玉娆 甄嬛盟友 关键助攻。在甄嬛最危急的时刻，她们从旁协助，提出疑点，寻找证据，是甄嬛能成功翻盘的重要力量。 总结 “滴血认亲”是《甄嬛传》中一场集智慧、权谋、人性、背叛与忠诚于一体的巅峰大戏。它不仅展现了后宫斗争的残酷无情，更标志着甄嬛的彻底蜕变——她不再是那个只求自保的妃嫔，而是成长为一个善于利用规则、洞察人心、手段强硬的后宫掌权者。这场风波后，皇后势力受到重创，甄嬛的地位则更加稳固，为她与皇后的最终决战奠定了坚实的基础。\nMethod Specifically, ARC-Hunyuan-Video-7B is built on top of the Hunyuan-7B vision-language model with the following key designs to meet the requirements of effective structured video comprehension:\nFine-Grained Visual-Audio Synchronization: We adopt an extra audio encoder and develop a fine-grained visual-audio synchronization mechanism, which fuses visual and audio tokens corresponding to the same time interval for obtaining temporally aligned visual-audio inputs. Explicit Temporal Awareness via Timestamp Overlay: In a simple yet highly effective design choice, we overlay the corresponding timestamp (in HH:MM:SS format) directly onto each video frame before it is processed by the vision encoder. This gives the model an explicit, direct signal for temporal localization. Automated Bootstrapped Annotation Pipeline: We collect millions of real-world short videos and develop a totally automated bootstrapped annotation pipeline, where the model’s own outputs refine the annotations. Comprehensive Training Regimen: A comprehensive training regimen is adopted based on the finding that grounding the model in objective tasks with Reinforcement Learning is key to unlocking high-quality, subjective understanding. API service We also provide access to the model via API, which is supported by vLLM. For details, please refer to the ARC-Hunyuan-Video-7B and ARC-Hunyuan-Video-7B-V0.\nWe release two versions: one is V0 version, which only supports video description and summarization in Chinese; the other is the version consistent with the model checkpoint and the one described in the paper, which is capable of multi-granularity timestamped video captioning and summarization, open-ended video question answering, temporal video grounding, and video reasoning (It supports Chinese and English videos and particularly excels at Chinese).\nIf you only need to understand and summarize short Chinese videos, we recommend using ARC-Hunyuan-Video-7B-V0.\nDue to video file size limitations imposed by the deployment API, we compressed input video resolutions for our online demo and API services. Consequently, model performance in these interfaces may slightly deviate from the results reported in the paper. To reproduce the original performance, we recommend local inference.\nFuture Work We observe that incorporating generic video datasets during training may inadvertently compromise the model’s capacity for real-world video understanding, potentially due to domain shift or noise introduced by non-real-world samples. To address this limitation, we plan to develop a dedicated model trained exclusively on rigorously curated real-world video data.\n",
+  "wordCount" : "2599",
+  "inLanguage": "en",
+  "datePublished": "2025-07-22T10:00:00Z",
+  "dateModified": "2025-07-22T10:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "ARC"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tencentarc.github.io/posts/arc-video-announcement/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ARC",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tencentarc.github.io/images/arc_logo_1.png"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tencentarc.github.io/" accesskey="h" title="ARC (Alt + H)">
+                <img src="/images/arc_logo_1.png" alt="ARC" height="32" style="vertical-align: middle;">
+            </a>
+            <div class="logo-switches">
+                <ul class="lang-switch">
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tencentarc.github.io/posts/" title="Blogs">
+                    <span>Blogs</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://tencentarc.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header> <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      ARC-Hunyuan-Video: Structured Video Comprehension of Real-World Shorts
+    </h1>
+    <div class="post-meta"><span title='2025-07-22 10:00:00 +0000 UTC'>July 22, 2025</span>&nbsp;·&nbsp;13 min&nbsp;·&nbsp;2599 words&nbsp;·&nbsp;ARC
+
+</div>
+  </header> 
+  <div class="post-content"><div class="button-container">
+    
+
+
+
+<a href="https://huggingface.co/TencentARC/ARC-Hunyuan-Video-7B" class="custom-button" target="_blank" rel="noopener noreferrer">
+    
+    <span>🤗 Hugging Face</span>
+</a> 
+
+
+
+<a href="https://github.com/TencentARC/ARC-Hunyuan-Video-7B/" class="custom-button" target="_blank" rel="noopener noreferrer">
+    
+    <span>GitHub</span>
+</a> 
+
+
+
+<a href="https://arc.tencent.com/en/document/ARC-Hunyuan-Video-7B" class="custom-button" target="_blank" rel="noopener noreferrer">
+    
+    <span>API Documentation</span>
+</a> 
+
+
+
+<a href="https://arc.tencent.com/zh/ai-demos/multimodal" class="custom-button" target="_blank" rel="noopener noreferrer">
+    
+    <span>Live Demo</span>
+</a> 
+
+</div> 
+<p>We introduce <strong>ARC-Hunyuan-Video-7B</strong>, a powerful multimodal model designed for <em>understanding real-world short videos</em>.
+Understanding user-generated videos is actually challenging due to their complex visual elements, high
+information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery.
+To address this challenge, ARC-Hunyuan-Video-7B
+processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.</p>
+<p>Compared to prior arts, we introduces a new paradigm of <strong>Structured Video Comprehension</strong>, with capabilities including:</p>
+<ul>
+<li><strong>Deep Understanding of Real-World Short Videos:</strong> ARC-Hunyuan-Video-7B excels at analyzing user-generated content from platforms like WeChat Channels and TikTok. It goes beyond surface-level descriptions to grasp the creator&rsquo;s intent, emotional expression, and core message by processing complex visual elements, dense audio cues, and rapid pacing.</li>
+<li><strong>Synchronized Audio-Visual Reasoning:</strong> The synchronization of raw visual and audio signals allows our model to answer complex questions that are impossible to solve with only one modality, such as understanding humor in a skit or details in a product review.</li>
+<li><strong>Precise Temporal Awareness:</strong> ARC-Hunyuan-Video-7B knows not just <em>what</em> happens, but <em>when</em> it happens. It supports multi-granularity timestamped captioning, temporal video grounding, and detailed event summarization, making it perfect for applications like video search, highlight generation, and content analysis.</li>
+<li><strong>Advanced Reasoning and Application Versatility:</strong> Leveraging a comprehensive multi-stage training regimen including Reinforcement Learning (RL), ARC-Hunyuan-Video-7B demonstrates strong reasoning capabilities. It supports zero-shot or few-shot fine-tuning for diverse downstream applications like video tagging, recommendation, and retrieval.</li>
+</ul>
+<p>We are open-sourcing <strong>ARC-Hunyuan-Video-7B</strong> including model checkpoint, inference code and API. The version supports Chinese and English videos and particularly excels at Chinese. We hope that ARC-Hunyuan-Video will contribute to advancing the field of structured video comprehension and inspire new developments in the comprehension of real-world short videos.</p>
+<h2 id="model-capabilities">Model Capabilities<a hidden class="anchor" aria-hidden="true" href="#model-capabilities">#</a></h2>
+<h3 id="1-joint-audio-visual-reasoning-for-complex-understanding">1. Joint Audio-Visual Reasoning for Complex Understanding<a hidden class="anchor" aria-hidden="true" href="#1-joint-audio-visual-reasoning-for-complex-understanding">#</a></h3>
+<p>ARC-Hunyuan-Video-7B&rsquo;s strength lies in its ability to integrate information from both the visual and audio streams. This is critical for real-world videos where the meaning is often conveyed through a combination of spoken words, sound effects, and on-screen texts (can be absent). We want to point out that although many short videos feature subtitles, these visual texts can be easily missed or only partially captured at low frame sampling rates. This makes processing the complete audio stream essential for a reliable
+comprehension of the spoken content. The capability of joint audio-visual reasoning unlocks a deeper level of understanding that video-only models cannot achieve. (Swipe right to see more cases.)</p>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <div class="video-carousel" id="my-first-carousel">
+        <div class="carousel-container">
+            
+            <div class="carousel-slide active" data-slide="0">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/parents.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: Describe the video content.</b>
+<br>
+<b>Thinking:</b>
+The video, titled 'POV: Parent Logic', presents a comedic skit about a parent's perception of their child's activities. A young man, playing both the child and the parent, begins by explaining his 'logic' (00:00:00 - 00:00:08). He states that when he leaves and returns, seeing his child on the phone, he will assume the child has been playing all the time, which will make him very angry. The scene then shifts to illustrate a different scenario (00:00:08 - 00:00:16). The parent leaves and returns to find the child doing homework. In this case, the parent's logic is that the child only started homework the moment they came back, causing the parent to be angry. Next, the scenario is reversed (00:00:16 - 00:00:24). The parent leaves and then returns to find the child playing on the phone. The parent's assumption is that the child started playing the instant they left, leading to anger. In the final scenario, the parent leaves and returns to find the child doing homework (00:00:24 - 00:00:35). The parent's logic is that the child stopped doing homework the moment they left and only started when they returned, again causing the parent to be angry.
+<br>
+<b>Answer:</b>
+This video is a humorous and relatable skit that satirizes the 'parent logic' phenomenon. The creator portrays a parent who, upon returning from leaving the house, experiences a series of negative thoughts based on what he sees. The core of the comedy lies in the parent's tendency to assume the worst in his child's activities. For instance, if the child is on the phone when he leaves and is doing homework when he returns, the parent assumes the child has only begun working the instant he leaves. This flawed logic is exaggerated in the final scene, where the parent assumes the child has stopped doing homework the moment he departs and only started when he comes back, leading to a comically intense reaction. The video effectively uses this exaggerated scenario to create a funny and shareable piece of content about the unique perspective and often illogical assumptions parents make about their children's behavior.</p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="1">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/iphone16.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: List the detailed purchase advice for the iPhone 16 in bullet point.</b>
+<br>
+<b>Thinking: </b>
+The user wants a comprehensive list of purchase advice. I need to identify all the models mentioned and their specific features and price points to create a complete guide. The video presents three main models with different price points and features. I will list them in the order they are introduced: the budget-friendly 16e, the standard 16, and the high-end 16 Pro. For each model, I will state its price range, its main selling point (e.g., battery, display, camera), and any key features (e.g., chip, lighting). The 16e is for $600, the 16 is for $800, and the 16 Pro is for $1000 and up. I will format this information into a clear, ordered list. 
+<br>
+<b>Answer:</b>
+The video provides the following detailed purchase advice for the iPhone 16 models:<br>
+1. **iPhone 16e (00:00:02 - 00:00:12):** This is the cheapest option, priced at $600. Its main selling point is a long-lasting battery and a reliable chip set designed for users who are not tech-savvy. It features a 6.1-inch display.<br>
+2. **iPhone 16 (00:00:13 - 00:00:34):** This model starts at $800. Its key upgrades include a brighter display with a dynamic island, a more powerful camera system with an ultra-wide and macro capability, and a smaller enhancement like the MagSafe charging ring. It comes in two sizes: a 6.1-inch model and a 6.7-inch model.<br>
+3. **iPhone 16 Pro (00:00:35 - 00:00:55):** These are the most advanced models, starting at $1000. They feature 120Hz displays, a significantly improved camera system with a telephoto lens, LiDAR for 3D mapping, better speakers and microphones, a brighter flashlight, and a faster A18 Pro chip. They are available in two sizes: a 6.3-inch model and a 6.9-inch Pro Max model.</p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="2">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/restuarant.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: Why is the man dissatisfied with the pork cutlet he cooked himself at home?</b>
+<br>
+<b>Thinking: </b>
+The video first shows the man cooking a pork cutlet at home. He batters it, fries it, and cuts it open to reveal the inside. At 00:00:09, he holds up a slice and says, 'So thin,' indicating his dissatisfaction with the thickness of the cutlet. This sets up a comparison with the next scene.
+<br>
+<b>Answer:</b>
+The man is dissatisfied with the pork cutlet because, after cutting it open, he finds that the inside is 'so thin,' indicating the cutlet lacks the desired thickness for the dish he intended to make.</p>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        
+        
+        <div class="carousel-nav">
+            <button class="carousel-btn prev-btn" onclick="window['changeSlide_my-first-carousel'](-1)"
+                aria-label="Previous video">‹</button>
+            <button class="carousel-btn next-btn" onclick="window['changeSlide_my-first-carousel'](1)"
+                aria-label="Next video">›</button>
+        </div>
+        
+    </div>
+
+    
+    <script>
+        (function () {
+            
+            window['changeSlide_my-first-carousel'] = function (direction) {
+                const carousel = document.getElementById('my-first-carousel');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+                
+                slides[currentIndex].classList.remove('active');
+
+                
+                currentIndex += direction;
+                if (currentIndex >= slides.length) currentIndex = 0;
+                if (currentIndex < 0) currentIndex = slides.length - 1;
+
+                
+                slides[currentIndex].classList.add('active');
+
+                
+                slides.forEach((slide, index) => {
+                    const video = slide.querySelector('video');
+                    if (video) {
+                        if (index !== currentIndex) {
+                            video.pause();
+                        }
+                    }
+                });
+            };
+
+            
+            const carousel = document.getElementById('my-first-carousel');
+            carousel.addEventListener('mouseover', function () {
+                carousel.dataset.active = 'true';
+            });
+
+            carousel.addEventListener('mouseout', function () {
+                carousel.dataset.active = 'false';
+            });
+        })();
+
+        
+        if (!window.carouselKeyboardHandlerAdded) {
+            window.carouselKeyboardHandlerAdded = true;
+            document.addEventListener('keydown', function (e) {
+                const activeCarousel = document.querySelector('.video-carousel[data-active="true"]');
+                if (!activeCarousel) return;
+
+                const carouselId = activeCarousel.id;
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    window[`changeSlide_${carouselId}`](-1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    window[`changeSlide_${carouselId}`](1);
+                }
+            });
+        }
+    </script>
+    
+<h3 id="2-fine-grained-temporal-understanding-and-summarization">2. Fine-Grained Temporal Understanding and Summarization<a hidden class="anchor" aria-hidden="true" href="#2-fine-grained-temporal-understanding-and-summarization">#</a></h3>
+<p>A core strength of ARC-Hunyuan-Video-7B is its exceptional ability to understand the chronological flow of events. The model can break down a video into a sequence of coherent, time-stamped events. Through leveraging its explicit temporal awareness, achieved through our timestamp overlay mechanism, and joint visual-audio reasoning, our model can also pinpoint event localization with remarkable accuracy. This demonstrates that our model does not just see what happens, but understands precisely when it happens, a cornerstone of structured video comprehension.  Such capability is pivotal for applications like video highlight generation and structured data extraction. (Swipe right to see more cases.)</p>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <div class="video-carousel" id="my-second-carousel">
+        <div class="carousel-container">
+            
+            <div class="carousel-slide active" data-slide="0">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/tutorial.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: 请按时间顺序给出视频的章节标题和对应时间点.</b>
+<br>
+<b>Thinking: </b>
+视频开头，博主指出家里的插座坏了，并强调要靠自己动手更换，以此引出教程主题(<span>00:00:00 - 00:00:06</span>)。第一步，她演示了更换插座前的安全措施，即先到电闸箱拉下总开关(<span>00:00:06 - 00:00:11</span>)。第二步，她开始拆卸旧的插座，先用螺丝刀撬开插座背面的卡扣，然后拧下所有螺丝，并提醒要用电笔测试内部电线，确认断电后才能操作(<span>00:00:11 - 00:00:31</span>)。第三步，她详细讲解了如何正确拆线，通过插座底部的字母标识（L、N、D）来确定火线、零线和地线的连接位置，并建议拍摄记录原线序以便复接(<span>00:00:31 - 00:00:54</span>)。第四步，她演示了如何将新插座的电线正确地插入对应字母标识的接线柱，并用螺丝刀将电线拧紧，确保火线铜线部分尽可能塞满接线孔以防裸露(<span>00:00:54 - 00:01:06</span>)。最后，她将插座盖板装回，用螺丝刀拧紧螺丝，完成整个更换过程，并用吹风机测试新插座的正常使用(<span>00:01:06 - 00:01:16</span>)。视频结尾，博主预告了下期内容，并呼吁观众点赞关注(<span>00:01:16 - 00:01:27</span>)。
+<br>
+<b>Answer:</b><br>
+<span>00:00:00 - 00:00:11</span> 更换插座的准备与安全：断电总开关<br>
+<span>00:00:11 - 00:00:31</span> 拆卸旧插座：工具准备与安全检查<br>
+<span>00:00:31 - 00:00:54</span> 正确拆线：识别火线、零线与地线<br>
+<span>00:00:54 - 00:01:06</span> 接线与安装：新插座的正确接线<br>
+<span>00:01:06 - 00:01:27</span> 完成安装与总结</p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="1">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/country.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: How many scenes appear in the video? Describe each scene in detail with the time range.</b>
+<br>
+<b>Thinking: </b>
+The video is a compilation of different morning routines. I need to identify the distinct scenes and their corresponding timestamps. The first scene, labeled 'Italy', shows a man being served a cappuccino and croissant from a waiter (00:00:00 - 00:00:11). The second scene, labeled 'UK', features a man pouring tea from a teapot into a cup and then drinking it (00:00:11 - 00:00:20). The third scene, labeled 'Switzerland', shows a man in a shirt dancing energetically on the street in front of a restaurant (00:00:20 - 00:00:23). The final scene, labeled 'USA', depicts a man with a paper as a bib, eating pancakes while wearing sunglasses (00:00:23 - 00:00:31).
+
+<br>
+<b>Answer:</b><br>
+1. **Italy (00:00:00 - 00:00:11):** A man in a black polo shirt is seated at an outdoor cafe. A waiter brings him a cappuccino and a
+croissant on a plate. He takes a bite of the croissant, then picks up his cup and takes a sip of the coffee.<br>
+2. **UK (00:00:11 - 00:00:20):** A man in a brown shirt is at a cafe. He pours hot tea from a white teapot into a cup, smiles, and then
+lifts the cup to take a drink.<br>
+3. **Switzerland (00:00:20 - 00:00:23):** The scene opens with a view of a pink and grey building. A man in a shirt and dark pants
+suddenly runs and dances energetically on the street in front of the restaurant window.<br>
+4. **USA (00:00:23 - 00:00:31):** A man in a grey shirt and sunglasses is seated at a cafe table with a paper draped over his shoulder
+like a bib. He smiles while looking at the camera.</p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="2">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/cake.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: When can we observe that the woman in the video comment on the food she made?</b>
+<br>
+<b>Thinking: </b>
+The user wants to find the moment the woman tastes the food and comments on the result. I need to locate the part of the video where she eats the treat and gives her opinion. At 00:00:27, she takes a bite of the frozen treat. She then comments on its texture and taste, saying 'As always, mine isn't pretty... that's really soft and so delicious'. This comment segment ends at 00:00:33 when she gives her final score. Therefore, the relevant time range is from when she starts eating and commenting until she finishes her sentence.
+<br>
+<b>Answer:</b>
+00:00:27 - 00:00:34</p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="3">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/2.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: 定位孙悟空被一分为二的镜头。</b>
+<br>
+<b>Thinking: </b><br>
+1. 首先，我需要理解问题的核心：找到孙悟空被“一分为二”的具体画面。<br>
+2. 我会浏览整个视频，寻找一个视觉上非常奇特的场景，即角色分裂成两个部分。<br>
+3. 在视频的后半段，我听到了猪八戒说“还有两刀呢”，这预示着接下来会有第二次攻击。<br>
+4. 紧接着在00:01:56，伴随着一声巨响和金光，画面中出现了两个穿着同样黄色衣服的孙悟空。这个镜头完全符合问题描述。<br>
+5. 这个分身的镜头持续到大约00:02:01，之后他们开始行动并与其他角色互动。<br>
+6. 因此，可以确定“孙悟空被一分为二"的镜头发生在00:01:56到00:02:01之间。
+<br>
+<b>Answer:</b>
+00:01:56 - 00:02:01</p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="4">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/1.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: 视频中的“真香”片段发生在什么时间？</b>
+<br>
+<b>Thinking: </b><br>
+1. 首先，我需要理解问题的核心：找到视频中被称为“真香”的片段。这个网络用语指一个人嘴上说不要，但身体却很诚实地接受了某样东西。<br>
+2. 我浏览了整个视频，寻找一个年轻人从激烈抗拒到最终接受食物的场景。<br>
+3. 在视频的早期部分（00:00:00 - 00:02:10），两个年轻男子表现出极度的暴躁和抵触情绪，拒绝任何人的食物，甚至威胁要跳下山崖。<br>
+4. 视频在00:02:11处，一个男孩开始做饭。<br>
+5. 经过一段时间的闹剧和准备后，在00:02:31，其中一个穿黑色运动服的男孩再次大声叫嚣：“我王境泽就是饿死，死外边从这里跳下去，不会吃你们一点东西！”<br>
+6. 紧接着，在00:02:32，他和其他人一起坐在火堆旁吃饭。当他看到食物时，态度发生了180度大转弯，开始狼吞虎咽地吃起来，并评价“这叫炒饭”，完全推翻了自己之前的言论。这就是字幕所提示的“真香”时刻。<br>
+7. 这个吃饭的场景一直持续到00:02:49左右，他们一边吃饭一边聊天。因此，我将“真香”片段的核心定义为从他开始吃饭到吃完饭聊天的这一段时间。
+<br>
+<b>Answer:</b>
+00:02:32 - 00:02:49</p>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        
+        
+        <div class="carousel-nav">
+            <button class="carousel-btn prev-btn" onclick="window['changeSlide_my-second-carousel'](-1)"
+                aria-label="Previous video">‹</button>
+            <button class="carousel-btn next-btn" onclick="window['changeSlide_my-second-carousel'](1)"
+                aria-label="Next video">›</button>
+        </div>
+        
+    </div>
+
+    
+    <script>
+        (function () {
+            
+            window['changeSlide_my-second-carousel'] = function (direction) {
+                const carousel = document.getElementById('my-second-carousel');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+                
+                slides[currentIndex].classList.remove('active');
+
+                
+                currentIndex += direction;
+                if (currentIndex >= slides.length) currentIndex = 0;
+                if (currentIndex < 0) currentIndex = slides.length - 1;
+
+                
+                slides[currentIndex].classList.add('active');
+
+                
+                slides.forEach((slide, index) => {
+                    const video = slide.querySelector('video');
+                    if (video) {
+                        if (index !== currentIndex) {
+                            video.pause();
+                        }
+                    }
+                });
+            };
+
+            
+            const carousel = document.getElementById('my-second-carousel');
+            carousel.addEventListener('mouseover', function () {
+                carousel.dataset.active = 'true';
+            });
+
+            carousel.addEventListener('mouseout', function () {
+                carousel.dataset.active = 'false';
+            });
+        })();
+
+        
+        if (!window.carouselKeyboardHandlerAdded) {
+            window.carouselKeyboardHandlerAdded = true;
+            document.addEventListener('keydown', function (e) {
+                const activeCarousel = document.querySelector('.video-carousel[data-active="true"]');
+                if (!activeCarousel) return;
+
+                const carouselId = activeCarousel.id;
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    window[`changeSlide_${carouselId}`](-1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    window[`changeSlide_${carouselId}`](1);
+                }
+            });
+        }
+    </script>
+    
+<h3 id="3-high-level-thematic-and-creative-analysis">3. High-Level Thematic and Creative Analysis<a hidden class="anchor" aria-hidden="true" href="#3-high-level-thematic-and-creative-analysis">#</a></h3>
+<p>Beyond just describing what is happening, ARC-Hunyuan-Video-7B demontrates a remarkable ability for thematic reasoning, which is vital for understanding content focused on emotional expression and viewpoint delivery. It can identify the creator&rsquo;s intent, analyze the emotional tone, and even comment on creative techniques like narrative structure or symbolism, showing a human-like grasp of the content&rsquo;s underlying message. (Swipe right to see more cases.)</p>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <div class="video-carousel" id="my-third-carousel">
+        <div class="carousel-container">
+            
+            <div class="carousel-slide active" data-slide="0">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/environment.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question： 列出这个视频值得借鉴的创意。</b>
+<br>
+<b>Thinking:</b>
+视频的核心信息是关于环境保护和人类责任。为了强化这一主题，创作者采用了多种高级的视听语言。一个非常典型的创意是“分屏”技术，它将截然不同的景象（如干旱沙漠与碧绿海洋、工业污染与自然生机）并列，形成强烈对比，直观地揭示了问题的严重性(00:00:49 - 00:00:51)。另一个创意是视觉叙事的递进，视频通过一系列对比鲜明的场景（如火山爆发与人类探索、森林火灾与生态修复、工业废水与清洁能源）来构建一个从“质疑”到“选择”的逻辑链。此外，视频还运用了象征手法，如用“选择向前”对应登山者的前行，用“选择敬畏”对应城市的夜景，用“选择坚持”对应在沙地中栽树的孤独身影，用“选
+择长久”对应工业与自然和谐共存的愿景，来赋予“选择”这一概念以深刻的内涵(00:00:25 - 00:00:52)。最后，视频的结尾将宏大的主题落脚于具体的行动号召上，通过“6.5世界环境日”的字样和“未来在我们手中”的口号，将抽象的环保理念转化为具体的、可操作的号召，极具感染力和号召力(00:01:14 - 00:01:46)。同时，视频的配乐、剪辑节奏和画面切换都服务于其主题，营造出一种既忧虑又充满希望的氛围，增强了视频的说服力和感染力。
+<br>
+<b>Answer:</b>
+该宣传片在创意上主要体现在以下几个方面：<br>
+1. **强烈的视觉对比与并置**：视频大量使用分屏技术，将同一场景下的两种极端状态（如干旱与生机、污染与纯净）并列，直观地展现了人类活动对环境造成的破坏与挑战，引发观众对问题的深刻反思。<br>
+2. **叙事性视觉语言的递进**：视频构建了一个从“质疑”到“选择”的叙事逻辑。通过“在质疑中选择向前”、“在欢呼中选择敬畏”等一系列递进的字幕，将抽象的环保理念与具体的行动号召相结合，赋予了“选择”这一概念以强大的情感和行动意义。<br>
+3. **象征意义的运用**：视频中的许多场景都带有强烈的象征意义，例如将“选择向前”与登山者的前行联系起来，象征着人类在面对未来时的责任与决心；将“选择敬畏”与城市的繁华夜景并置，引发观众对人与城市关系的思考。<br>
+4. **最终的情感升华与行动号召**：视频的结尾部分，通过展示人类在环保事业中的积极行动（如风力发电、生态修复），最终落脚于“未来在我们手中”这一强有力的口号，将宏大的主题与具体的、可操作的环保行动紧密联系起来，极大地增强了视频的感染力和号召力。<br>
+5. **卓越的视听语言运用**：宣传片在配乐、剪辑和画面选择上都非常出色，其激昂与舒缓交织的音乐、富有冲击力的画面切换、以及将自然景观与人类活动并置的叙事手法，共同营造出一种既忧虑又充满希望的氛围，极大地增强了视频的说服力和感染力。
+<br>
+<br>
+<b>Question: 你觉得最能体现主题的视频片段是哪一个?</b>
+<br>
+<b>Thinking：</b>
+这个问题要求理解视频的主旨，并从中找出最能概括或升华这一主旨的画面。视频的核心信息是关于人类面临的环境挑战以及我们应如何应对。我需要寻找一个画面，它能够象征性地总结出视频所传达的关于希望、选择与未来的信息。视频结尾（00:01:46 - 00:01:49）的标题“未来在我们手中”直接点明了主题。然而，在此之前的画面中，有一幕极具象征意义：在广阔的绿色山脉背景下，出现了“未来在我们手中”这几个大字。这不仅是对主题的总结，也像是一种宣言，将希望和责任交给了观众。因此，这最后一帧是整个视频情感和信息的集中体现。
+<br>
+<b>Answer: </b>
+最能体现视频主题的一幕是视频结尾处（00:01:46 - 00:01:49）的标题画面。该画面在壮丽的绿色山脉背景上，清晰地展示了“未来在我们手中”这句核心主旨，将视频所探讨的关于人类、选择与环境的关系最终落脚于人类自身的责任与希望上，起到了点睛和升华主题的作用。</p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="1">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/food.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: 这个视频的主题是什么？</b>
+<br>
+<b>Thinking: </b>
+视频以一个动画形式展开，讲述了一个关于贪吃和健康的故事。(<span>00:00:00 - 00:00:12</span>) 一个光头男子在一家日式餐厅里，看到“白金枪鱼寿司”从200元降价到20元，他欣喜若狂，大喊“捡大便宜啦”，并立刻向老板要了一盘。他狼吞虎咽地吃着寿司，连连称赞“这么好吃”，并心满意足地要求再来十盘。(<span>00:00:12 - 00:00:22</span>) 画面切换到男子的消化系统内部，肠道拟人化地抱怨道：“这白金枪鱼啥味儿的！”，并发现食物在消化道里变成了一坨油，感叹道：“这咋还这么多呀”。肠道建议直接排出，但一个代表脂肪的黄色小人阻止了它，声称“减脂期看不得这些”，并命令肠道“我告就完”。(<span>00:00:22 - 00:00:28</span>) 肠道被脂肪小人堵在“菊花门”前，动弹不得，只能发出“救命”的呼救声。紧接着，一股巨大的黄色液体（代表脂肪）从肛门喷涌而出，伴随着一声爆炸的特效，男子被这股力量猛地掀翻在地。(<span>00:00:28 - 00:00:39</span>) 男子醒来后，发现自己面前堆着一叠用过的纸尿裤，他一脸困惑地问：“这吃个寿司，给纸尿裤干啥呀？”。这时，一位女服务员走过来，揭示了真相：“还真以为自己捡了便宜，这种便宜的白金枪鱼寿司，身上都是油鱼肉做的”，点明了他之所以需要用纸尿裤，是因为他吃了大量的油。
+<br>
+<b>Answer:</b>
+该视频通过一个生动有趣的动画短片，讲述了一个男子因贪图“白金枪鱼寿司”的便宜而引发健康问题的故事。视频的核心情节是，男子被20元一盘的低价所吸引，大快朵颐，却不知自己摄入了大量的脂肪。当他感到身体不适时，他的消化系统内部上演了一场“脂肪保卫战”，最终导致他腹泻不止，不得不使用纸尿裤。视频的结尾揭示了真相：所谓的“白金枪鱼”实际上是由大量的油鱼肉制成，所谓的“便宜”只是商家的营销噱头。创作者以一种幽默夸张的手法，巧妙地讽刺了现实生活中常见的“价格刺客”现象，深刻地揭示了消费者在面对低价诱惑时可能做出的非理性消费行为。视频不仅具有娱乐性，更重要的是，它以一种轻松的方式向观众普及了健康饮食和食品安全知识，警示人们不要被表面的低价所迷惑，要警惕那些名不副实的“便宜货”，从而做出更明智的消费选择。
+<br></p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="2">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/rain.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: 描述视频的内容和主题。</b>
+<br>
+<b>Thinking: </b>
+视频开头，镜头从后方拍摄一位男士在雨中撑着透明雨伞行走的背影，配文“你以为给老公打伞的样子”，营造出一种浪漫温馨的氛围(00:00:00 - 00:00:02)。紧接着，镜头切换到一位女士的自拍视角，她面带微笑，手持雨伞，背景音乐轻柔，画面上浮现出“想象中”、“美丽”、“浪漫”、“幸福”、“端庄”等字样，进一步强化了理想中的场景(00:00:02 - 00:00:06)。最后，视频画风突变，切换到“现实中”的场景，镜头对准了那位男士，他正顶着一把被风吹得完全变形的雨伞，雨水顺着他的脸和眼镜不断滑落，他本人则一脸狼狈和无奈，与之前的浪漫想象形成强烈反差(00:00:06 - 00:00:12)。
+<br>
+<b>Answer:</b>
+该视频通过一个简单而生动的“想象 vs 现实”的对比，幽默地记录了情侣间一个充满反差感的日常瞬间。视频前半部分通过浪漫的配乐和“你以为”的文字，构建了一个温馨、体贴的理想化场景：一位女士在雨中为男士撑伞，自己则显得美丽、幸福。然而，视频的后半部分迅速反转，揭示了“现实”中的情景——男士不仅没能被妥善保护，反而被一把被大风吹得东倒西歪的雨伞“欺负”，狼狈不堪。这种强烈的反差制造了出色的喜剧效果，让观众在会心一笑中感受到真实、接地气的爱情。视频的核心在于其真实性和幽默感，它打破了人们对浪漫的刻板印象，展现了爱情中平凡、甚至有些笨拙但依然充满乐趣的一面，成功地用一个生活小插曲引发了观众的共鸣。
+<br></p>
+                </div>
+                
+            </div>
+            
+            <div class="carousel-slide" data-slide="3">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/couple.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question: 描述视频主旨内容。</b>
+<br>
+<b>Thinking: </b>
+视频开头，一名戴眼镜、穿灰色短袖上衣和深色裤子的女子正坐在室内（看起来像家里的沙发或椅子上），手持一部红色手机壳的手机，表情夸张地向旁边一名穿着黑色Balenciaga T恤的男子讲述着什么。男子坐在她旁边，表情显得有些不耐烦或漠不关心。视频画面上方有黄色大字标题："当我不在乎女朋友分享的八卦时"。女子讲述时，屏幕上出现文字："我同事的前男友，跟她闺蜜的前男友在一起了"。男子打断她，屏幕上出现文字："跟你有啥关系啊"。听到这句话后，女子表情瞬间从激动变为震惊和愤怒，她猛地放下手机，站起身，拿起放在旁边的一个绿色行李箱，头也不回地快速走向门口，离开了画面。背景音乐在女子离开时变得动感起来。
+<br>
+<b>Answer:</b>
+该视频以幽默夸张的手法，演绎了一个情侣间因男方对女方分享的八卦（同事与闺蜜的前男友复合）表现出不耐烦和漠不关心（"跟你有什么关系"）而引发女方愤怒并迅速离家出走的情景。视频通过强烈的戏剧冲突和女方夸张的反应，讽刺了情侣沟通中缺乏共情和过度冷漠的问题，旨在引发观众对于情侣相处模式、情感需求以及如何回应伴侣情绪的思考和讨论。它利用了常见的"直男式"回应作为引爆点，制造了喜剧效果，同时也触及了现实生活中可能存在的亲密关系痛点。
+<br>
+<br>
+<b>Question: 用网络热词描述这个男生</b>
+<br>
+<b>Thinking：</b>
+这个问题考察对视频主旨和创作意图的理解。整个视频的核心笑点在于男生对八卦的极度冷漠，这种反应在网络用语中有一个非常形象的词叫"佛系"。我需要将这个概念与视频中的行为联系起来。
+<br>
+<b>Answer: </b>
+该男生那种对于女友分享的复杂人际关系和情感纠葛表现出极度冷漠、不关心、不感兴趣的态度，这种反应可以被形象地描述为“佛系”或“直男式”的反应。</p>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        
+        
+        <div class="carousel-nav">
+            <button class="carousel-btn prev-btn" onclick="window['changeSlide_my-third-carousel'](-1)"
+                aria-label="Previous video">‹</button>
+            <button class="carousel-btn next-btn" onclick="window['changeSlide_my-third-carousel'](1)"
+                aria-label="Next video">›</button>
+        </div>
+        
+    </div>
+
+    
+    <script>
+        (function () {
+            
+            window['changeSlide_my-third-carousel'] = function (direction) {
+                const carousel = document.getElementById('my-third-carousel');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+                
+                slides[currentIndex].classList.remove('active');
+
+                
+                currentIndex += direction;
+                if (currentIndex >= slides.length) currentIndex = 0;
+                if (currentIndex < 0) currentIndex = slides.length - 1;
+
+                
+                slides[currentIndex].classList.add('active');
+
+                
+                slides.forEach((slide, index) => {
+                    const video = slide.querySelector('video');
+                    if (video) {
+                        if (index !== currentIndex) {
+                            video.pause();
+                        }
+                    }
+                });
+            };
+
+            
+            const carousel = document.getElementById('my-third-carousel');
+            carousel.addEventListener('mouseover', function () {
+                carousel.dataset.active = 'true';
+            });
+
+            carousel.addEventListener('mouseout', function () {
+                carousel.dataset.active = 'false';
+            });
+        })();
+
+        
+        if (!window.carouselKeyboardHandlerAdded) {
+            window.carouselKeyboardHandlerAdded = true;
+            document.addEventListener('keydown', function (e) {
+                const activeCarousel = document.querySelector('.video-carousel[data-active="true"]');
+                if (!activeCarousel) return;
+
+                const carouselId = activeCarousel.id;
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    window[`changeSlide_${carouselId}`](-1);
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    window[`changeSlide_${carouselId}`](1);
+                }
+            });
+        }
+    </script>
+    
+<h3 id="4-long-video-structured-understanding">4. Long Video Structured Understanding<a hidden class="anchor" aria-hidden="true" href="#4-long-video-structured-understanding">#</a></h3>
+<p>Although ARC-Hunyuan-Video-7B is primarily designed for understanding short-form videos (typically under five minutes), it also demonstrates exceptional capabilities in the structural analysis of long videos. This is achieved by segmenting the long video, performing inference on each segment individually, and then using a Large Language Model (LLM) to integrate the results. Benefiting from parallel vLLM inference, the end-to-end pipeline for processing a 40-minute video takes less than 3 minutes. This efficiency highlights its significant potential for practical, real-world applications.</p>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <div class="video-carousel" id="my-fourth-carousel">
+        <div class="carousel-container">
+            
+            <div class="carousel-slide active" data-slide="0">
+                <div class="video-container">
+                    <video controls preload="metadata" style="width: auto; height: 100%;">
+                        <source src="/videos/examples/play.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <div class="video-caption">
+                    <p><b>Question： 请提供视频的结构化解析.</b>
+<br>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《甄嬛传》“滴血认亲”事件全景解析</title>
+    <style>
+ body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            line-height: 1.6;
+            /* 设定基础文字颜色为高对比度深灰色 */
+            color: #333333;
+            background-color: #ffffff;
+            max-width: 1600px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        /* 确保段落和列表项也使用基础文字颜色 */
+        p, li {
+            color: #333333;
+        }
+        /* 标题使用纯黑色，最清晰 */
+        h2, h3, h4 {
+            color: #000000;
+            border-bottom: 1px solid #dddddd;
+            padding-bottom: 0.3em;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.5em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0;
+            font-size: 0.9em;
+            display: block;
+            overflow-x: auto;
+        }
+        /* 表格单元格文字也使用基础深灰色 */
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 10px 15px;
+            text-align: left;
+            color: #333333;
+        }
+        /* 表头文字使用纯黑色，并加粗 */
+        thead th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #000000;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* 加粗文字使用纯黑色，非常醒目 */
+        strong {
+            color: #000000 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>《甄嬛传》“滴血认亲”事件全景解析</h2>
+    <p>该视频完整再现了电视剧《甄嬛传》中最为惊心动魄的核心情节——“滴血认亲”。这并非一次简单的诬告，而是一场由皇后在幕后精心策划，祺贵人、静白、斐雯等人联手执行，意图一举扳倒甄嬛（熹贵妃）及其家族的致命阴谋。整个事件情节跌宕起伏，从阴谋初现、对簿公堂，到深陷绝境，再到惊天逆转，最终尘埃落定，全面展现了后宫斗争的残酷性、复杂性以及甄嬛超凡的智慧与胆识。</p>
+
+    <h3>事件时间线梳理</h3>
+    <p>整场风波环环相扣，逻辑缜密，可大致分为七个阶段：</p>
+
+    <h4>第一阶段：风波前奏 —— 甄嬛智审叛仆 (00:00:07 - 00:02:30)</h4>
+    <ul>
+        <li><strong>起因</strong>: 永寿宫宫女斐雯被收买，准备诬告甄嬛。</li>
+        <li><strong>经过</strong>: 甄嬛早已察觉斐雯异心。她没有直接点破，而是以“琉璃花樽”和“青玉花樽”的细节设下圈套，通过一系列看似随意的提问，轻松击溃了斐雯的心理防线，证明其不仅记性差，而且心思并未放在本职工作上，为后续其证词不可信埋下伏笔。这展现了甄嬛在危机来临前的敏锐洞察力和沉着冷静。</li>
+    </ul>
+
+    <h4>第二阶段：阴谋浮现 —— 祺贵人发难告发 (00:02:30 - 00:05:00)</h4>
+    <ul>
+        <li><strong>发难</strong>: 祺贵人联合斐雯，在皇后及众妃嫔面前，正式告发熹贵妃与温实初太医有私，秽乱后宫。</li>
+        <li><strong>辩论</strong>: 众人围绕斐雯证词的合理性展开辩论。端妃、敬妃等人提出质疑，认为斐雯一个小小宫女能屡次窥见私情不合常理。而皇后则假意调停，实则步步引导，将事态扩大化。</li>
+        <li><strong>高潮</strong>: 皇上驾到，祺贵人当着皇上的面，再次声泪俱下地告发，将事件彻底推向无法挽回的境地。</li>
+    </ul>
+
+    <h4>第三阶段：对簿公堂 —— 传召人证静白 (00:05:00 - 00:08:54)</h4>
+    <ul>
+        <li><strong>扩大战场</strong>: 祺贵人进一步提出，甄嬛在甘露寺修行期间便与温实初过从甚密，并请出关键人证——甘露寺的静白师太。</li>
+        <li><strong>伪证</strong>: 静白师太当堂作出“证词”，她以出家人的身份做伪证，描述温实初如何频繁探望甄嬛，两人如何独处一室，言之凿凿，极具迷惑性，让皇上的疑心加重。</li>
+        <li><strong>场外联动</strong>: 与此同时，甄嬛的妹妹玉娆得知消息，心急如焚地赶回宫中，准备为姐姐辩护。</li>
+    </ul>
+
+    <h4>第四阶段：危机升级 —— 直指皇嗣血统 (00:10:00 - 00:17:47)</h4>
+    <ul>
+        <li><strong>核心攻击</strong>: 祺贵人见私情指控未能一击致命，便抛出了更具杀伤力的指控——质疑六阿哥弘曕并非皇上亲生，而是甄嬛与温实初的私生子。</li>
+        <li><strong>论据</strong>: 她以甄嬛早产、宫中流言等作为“证据”，将矛头直指皇室血脉的纯正性，这触及了皇权的底线。</li>
+        <li><strong>皇室反应</strong>: 皇上勃然大怒，但疑心已生。皇后则假意劝解，实则火上浇油，强调此事关系江山社稷，不可不查。</li>
+    </ul>
+
+    <h4>第五阶段：惊天豪赌 —— 滴血认亲 (00:17:47 - 00:22:30)</h4>
+    <ul>
+        <li><strong>终极手段</strong>: 在皇后的暗示下，祺贵人提出了最极端、也最具戏剧性的验证方法——<strong>滴血认亲</strong>。</li>
+        <li><strong>甄嬛的决断</strong>: 面对皇上的猜忌和步步紧逼，甄嬛悲愤交加。为了自证清白，她毅然同意让自己的儿子弘曕与温实初进行滴血认亲。</li>
+        <li><strong>执行</strong>: 仪式开始，在众人屏息凝视下，太监刺破弘曕与温实初的手指，将两人的血滴入同一碗清水中。</li>
+    </ul>
+
+    <h4>第六阶段：惊天逆转 —— 识破白矾之计 (00:22:30 - 00:28:24)</h4>
+    <ul>
+        <li><strong>深陷绝境</strong>: 碗中两人的血液竟然相融！皇上龙颜大怒，皇后立刻下令将甄嬛打入冷宫，杖杀温实初。甄嬛瞬间从贵妃沦为阶下囚，陷入了必死之局。</li>
+        <li><strong>绝地反击</strong>: 在被拖走的一刻，甄嬛注意到水有问题。她挣脱侍卫，大喊“这水有问题！”，并指出任何人的血滴入此水都会相融。</li>
+        <li><strong>真相大白</strong>: 甄嬛的盟友敬妃和端妃也察觉到异常，指出水中被加入了白矾。白矾可使血液凝结，造成相融的假象。甄嬛为证清白，亲自用自己的血和苏培盛的血试验，证实了水的确被动了手脚。</li>
+    </ul>
+
+    <h4>第七阶段：尘埃落定 —— 清算乱局罪魁 (00:28:24 - 00:40:08)</h4>
+    <ul>
+        <li><strong>二次验亲</strong>: 皇上下令换上清水，重新验亲。这一次，弘曕与温实初的血液并未相融，甄嬛的清白得以证明。</li>
+        <li><strong>反向审问</strong>: 局势瞬间逆转。甄嬛开始反击，审问静白师太。在玉娆拿出确凿证据（证明静白曾虐待甄嬛）和严刑逼供的威胁下，静白心理防线崩溃，承认自己是受祺贵人指使作伪证。</li>
+        <li><strong>最终处置</strong>: 祺贵人见大势已去，将所有罪责揽到自己身上，但言语中暗示皇后才是幕后主使。皇上盛怒之下，将祺贵人打入冷宫，后被乱棍打死；静白则被处以割舌之刑后杖毙。皇后虽未被直接指证，但其嫌疑已深植皇上心中。</li>
+    </ul>
+
+    <h3>核心人物关系与动机分析</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>角色</th>
+                <th>身份/阵营</th>
+                <th>在事件中的角色与动机</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>甄嬛 (熹贵妃)</strong></td>
+                <td>主角</td>
+                <td><strong>被陷害者与最终反击者</strong>。动机是自保、保护子女和家族。她凭借智慧、胆识和盟友的帮助，成功化解了这场生死危机。</td>
+            </tr>
+            <tr>
+                <td><strong>皇后</strong></td>
+                <td>甄嬛的对立面</td>
+                <td><strong>幕后主使</strong>。动机是铲除甄嬛这个最大的威胁，巩固自己的后位和乌拉那拉氏的荣耀。她全程假意公允，实则掌控全局。</td>
+            </tr>
+            <tr>
+                <td><strong>祺贵人</strong></td>
+                <td>皇后党羽</td>
+                <td><strong>前台执行者/主要打手</strong>。动机是出于对甄嬛的嫉妒以及为家族争光的野心。她头脑简单，被人当枪使，最终下场凄惨。</td>
+            </tr>
+            <tr>
+                <td><strong>皇上</strong></td>
+                <td>权力中心</td>
+                <td><strong>最高裁决者</strong>。他的多疑、重情又重面子的性格被皇后利用。他的态度随着“证据”的变化而摇摆，是整个事件走向的关键。</td>
+            </tr>
+            <tr>
+                <td><strong>温实初</strong></td>
+                <td>甄嬛的守护者</td>
+                <td><strong>被牵连者</strong>。因其与甄嬛的旧情及对她的守护，成为阴谋中不可或缺的一环。</td>
+            </tr>
+            <tr>
+                <td><strong>静白 & 斐雯</strong></td>
+                <td>皇后党羽</td>
+                <td><strong>底层棋子/伪证人</strong>。为了利益或被胁迫而参与阴谋，是这场上层斗争的牺牲品。</td>
+            </tr>
+            <tr>
+                <td><strong>端妃、敬妃、玉娆</strong></td>
+                <td>甄嬛盟友</td>
+                <td><strong>关键助攻</strong>。在甄嬛最危急的时刻，她们从旁协助，提出疑点，寻找证据，是甄嬛能成功翻盘的重要力量。</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>总结</h3>
+    <p>“滴血认亲”是《甄嬛传》中一场集智慧、权谋、人性、背叛与忠诚于一体的巅峰大戏。它不仅展现了后宫斗争的残酷无情，更标志着甄嬛的彻底蜕变——她不再是那个只求自保的妃嫔，而是成长为一个善于利用规则、洞察人心、手段强硬的后宫掌权者。这场风波后，皇后势力受到重创，甄嬛的地位则更加稳固，为她与皇后的最终决战奠定了坚实的基础。</p>
+
+</body>
+</html></p>
+                </div>
+                
+            </div>
+            
+        </div>
+
+        
+        
+    </div>
+
+    
+<h2 id="method">Method<a hidden class="anchor" aria-hidden="true" href="#method">#</a></h2>
+<p>Specifically, ARC-Hunyuan-Video-7B is built on top of the Hunyuan-7B vision-language model with the following key designs to meet the requirements of effective structured video comprehension:</p>
+<ul>
+<li><strong>Fine-Grained Visual-Audio Synchronization:</strong> We adopt an extra audio encoder and develop a fine-grained visual-audio synchronization mechanism, which fuses visual and audio tokens corresponding to the same time interval for obtaining temporally aligned visual-audio inputs.</li>
+<li><strong>Explicit Temporal Awareness via Timestamp Overlay:</strong> In a simple yet highly effective design choice, we overlay the corresponding timestamp (in HH:MM:SS format) directly onto each video frame before it is processed by the vision encoder. This gives the model an explicit, direct signal for temporal localization.</li>
+<li><strong>Automated Bootstrapped Annotation Pipeline:</strong> We collect millions of real-world short videos and develop a totally automated bootstrapped annotation pipeline, where the model’s own outputs refine the annotations.</li>
+<li><strong>Comprehensive Training Regimen:</strong>  A comprehensive training regimen is adopted based on the finding that grounding the model in objective
+tasks with Reinforcement Learning is key to unlocking high-quality, subjective understanding.</li>
+</ul>
+<figure>
+    <img loading="lazy" src="/images/arc_video_method.jpg"/> 
+</figure>
+
+<h2 id="api-service">API service<a hidden class="anchor" aria-hidden="true" href="#api-service">#</a></h2>
+<p>We also provide access to the model via API, which is supported by <a href="https://github.com/vllm-project/vllm">vLLM</a>. For details, please refer to the <a href="https://arc.tencent.com/en/document/ARC-Hunyuan-Video-7B">ARC-Hunyuan-Video-7B</a> and <a href="https://arc.tencent.com/en/document/ARC-Hunyuan-Video-7B-V0">ARC-Hunyuan-Video-7B-V0</a>.</p>
+<p>We release two versions: one is V0 version, which only supports video description and summarization in Chinese; the other is the version consistent with the model checkpoint and the one described in the paper, which is capable of multi-granularity timestamped video captioning and summarization, open-ended video question answering, temporal video grounding, and video reasoning (It supports Chinese and English videos and particularly excels at Chinese).</p>
+<p>If you only need to understand and summarize short Chinese videos, we recommend using ARC-Hunyuan-Video-7B-V0.</p>
+<p>Due to video file size limitations imposed by the deployment API, we compressed input video resolutions for our online demo and API services. Consequently, model performance in these interfaces may slightly deviate from the results reported in the paper. To reproduce the original performance, we recommend local inference.</p>
+<h2 id="future-work">Future Work<a hidden class="anchor" aria-hidden="true" href="#future-work">#</a></h2>
+<p>We observe that incorporating generic video datasets during training may inadvertently compromise the model&rsquo;s capacity for real-world video understanding, potentially due to domain shift or noise introduced by non-real-world samples. To address this limitation, we plan to develop a dedicated model trained exclusively on rigorously curated real-world video data.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://tencentarc.github.io/">ARC</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
