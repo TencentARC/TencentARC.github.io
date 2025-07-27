@@ -243,7 +243,8 @@ processes visual, audio, and textual signals end-to-end for a deep, structured u
 Understanding user-generated videos is actually challenging due to their complex visual elements, high
 information density in both visuals and audio, and fast pacing that focuses on emotional expression and viewpoint delivery.
 To address this challenge, ARC-Hunyuan-Video-7B
-processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.</p>
+processes visual, audio, and textual signals end-to-end for a deep, structured understanding of video through integrating and reasoning over multimodal cues.
+Stress test reports show an inference time of just 10 seconds for a one-minute video on H20 GPU, yielding an average of 500 tokens, with inference accelerated by the vLLM framework.</p>
 <p>Compared to prior arts, we introduces a new paradigm of <strong>Structured Video Comprehension</strong>, with capabilities including:</p>
 <ul>
 <li><strong>Deep Understanding of Real-World Short Videos:</strong> ARC-Hunyuan-Video-7B excels at analyzing user-generated content from platforms like WeChat Channels and TikTok. It goes beyond surface-level descriptions to grasp the creator&rsquo;s intent, emotional expression, and core message by processing complex visual elements, dense audio cues, and rapid pacing.</li>
@@ -1223,7 +1224,7 @@ tasks with Reinforcement Learning is key to unlocking high-quality, subjective u
 
 <h2 id="api-service">API service<a hidden class="anchor" aria-hidden="true" href="#api-service">#</a></h2>
 <p>We also provide access to the model via API, which is supported by <a href="https://github.com/vllm-project/vllm">vLLM</a>. For details, please refer to the <a href="https://arc.tencent.com/en/document/ARC-Hunyuan-Video-7B">ARC-Hunyuan-Video-7B</a> and <a href="https://arc.tencent.com/en/document/ARC-Hunyuan-Video-7B-V0">ARC-Hunyuan-Video-7B-V0</a>.</p>
-<p>We release two versions: one is V0 version, which only supports video description and summarization in Chinese; the other is the version consistent with the model checkpoint and the one described in the paper, which is capable of multi-granularity timestamped video captioning and summarization, open-ended video question answering, temporal video grounding, and video reasoning (It supports Chinese and English videos and particularly excels at Chinese).</p>
+<p>We release two versions: one is V0 version, which only supports video description and summarization in Chinese; the other is the version consistent with the model checkpoint and the one described in the paper, which is capable of multi-granularity timestamped video captioning and summarization, open-ended video question answering, temporal video grounding, and video reasoning (It supports Chinese and English videos and particularly excels at Chinese). For videos longer than 5 minutes, we only support structured descriptions. We process these videos in 5-minute segments and use an LLM to integrate the inference results.</p>
 <p>If you only need to understand and summarize short Chinese videos, we recommend using ARC-Hunyuan-Video-7B-V0.</p>
 <p>Due to video file size limitations imposed by the deployment API, we compressed input video resolutions for our online demo and API services. Consequently, model performance in these interfaces may slightly deviate from the results reported in the paper. To reproduce the original performance, we recommend local inference.</p>
 <h2 id="future-work">Future Work<a hidden class="anchor" aria-hidden="true" href="#future-work">#</a></h2>
